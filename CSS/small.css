@@ -1,0 +1,16 @@
+#gameScore{
+    font-size: 1.7rem;
+}
+#resetButton{
+    width: 15%;
+    font-size: 1.0rem;
+}
+table{
+    border-radius: 10px;
+    border: 7px solid darkgray;
+}
+td{
+    width: 35px;
+    height: 35px;
+
+}

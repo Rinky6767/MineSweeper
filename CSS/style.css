@@ -1,0 +1,60 @@
+body{
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+table{
+    margin: auto;
+    margin-top: 6%;
+    background-color: gainsboro;
+    border-radius: 12px;
+    border: 10px solid darkgray;
+}
+td{
+    width: 45px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: lightskyblue;
+   
+}
+#resultDisplay{
+    display: none;
+    text-align: center;
+}
+#gameScore{
+    text-align: center;
+    color: red;
+    border-radius: 5px;
+    width: 10%;
+    font-size: 1.8rem;
+    height: 20%;
+}
+#start{
+   color:white;
+   margin-left: 12px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#resetButton {
+    background-color: red;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    width:15%;
+    height: 25%;
+    color: white;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+#intro{
+    color:red;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
