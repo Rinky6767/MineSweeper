@@ -23,7 +23,7 @@ td{
 }
 #gameScore{
     text-align: center;
-    color: red;
+    color: black;
     border-radius: 5px;
     width: 10%;
     font-size: 1.8rem;
@@ -39,7 +39,7 @@ td{
     cursor: pointer;
 }
 #resetButton {
-    background-color: red;
+    background-color: palevioletred;
     border: none;
     border-radius: 6px;
     font-size: 1.0rem;
@@ -53,7 +53,7 @@ td{
     justify-content: space-around;
 }
 #intro{
-    color:red;
+    color:lightcoral;
     text-decoration: underline;
     text-transform: uppercase;
     text-align: center;
