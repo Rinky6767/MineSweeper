@@ -1,10 +1,18 @@
 //create table 
 let random = [];
 let score = 0;
+let hg=0;
 let playerGuess=0;
+let highestScore= document.getElementById("hgs");
 let display= document.getElementById("resultDisplay");
 let reset= document.getElementById("resetButton").addEventListener("click",reStart);
 
+if(localStorage.getItem("Score")!==null){
+    hg= localStorage.getItem("Score");
+    highestScore.textContent= "Highest Score: "+hg;
+}else{
+    localStorage.setItem("Score",0);
+}
 function reStart(){
     window.location.reload();
 }
@@ -72,7 +80,10 @@ function checker(e) {
     else {
         let updateScore= document.getElementById("gameScore");
         score = score + 1;
+         hg= Math.max(hg,score);
+         highestScore.textContent= "Highest Score: "+hg;
         updateScore.textContent= "Score: "+score;
+        localStorage.setItem("Score",hg);
     }
 }
 
