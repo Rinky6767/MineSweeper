@@ -1,8 +1,6 @@
 
-
-
 #gameScore{
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #resetButton{
@@ -16,4 +14,9 @@ table{
 td{
     width: 150px;
     height: 30px;
+}
+#hgs{
+    font-size:0.8rem;
+    text-align: center;
+    margin-left: 50px;
 }
