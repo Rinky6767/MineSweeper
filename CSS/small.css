@@ -1,3 +1,8 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #gameScore {
     font-size: 1.0rem;
     margin:5px;
