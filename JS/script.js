@@ -56,6 +56,7 @@ function checker(e) {
     let numberPattern = /\d+/g;
     let idvalue = parseInt(id.match(numberPattern).join());
     if (random.includes(idvalue)) {
+         going.pause();
         display.style.display="block";
         display.textContent="Loser";
         let start= createButton();
