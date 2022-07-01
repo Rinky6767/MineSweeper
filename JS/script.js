@@ -7,6 +7,11 @@ let highestScore= document.getElementById("hgs");
 let display= document.getElementById("resultDisplay");
 let reset= document.getElementById("resetButton").addEventListener("click",reStart);
 
+let going = new Audio("Adventure-320bit.mp3");
+window.onload()
+{
+ going.play();
+}
 if(localStorage.getItem("Score")!==null){
     hg= localStorage.getItem("Score");
     highestScore.textContent= "Highest Score: "+hg;
