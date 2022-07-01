@@ -1,23 +1,26 @@
-
-#gameScore{
+#gameScore {
     font-size: 1.0rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#resetButton{
+
+#resetButton {
     width: 20%;
     height: 25px;
     font-size: 1.0rem;
     float: right;
 }
-table{
+
+table {
     border-radius: 10px;
     border: 7px solid darkgray;
 }
-td{
+
+td {
     width: 150px;
     height: 30px;
 }
-#hgs{
-    font-size:1.0rem;
+
+#hgs {
+    font-size: 1.0rem;
     text-align: center;
 }
