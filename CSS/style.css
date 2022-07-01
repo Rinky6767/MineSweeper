@@ -44,13 +44,14 @@ td{
     border-radius: 6px;
     font-size: 1.0rem;
     cursor: pointer;
-    width:15%;
-    height: 25%;
+    width:10%;
+    height: 25px;
     color: white;
 }
 .wrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    align-items: center;
 }
 #intro{
     color:lightcoral;

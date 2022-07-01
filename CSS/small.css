@@ -5,7 +5,9 @@
 }
 #resetButton{
     width: 20%;
+    height: 25px;
     font-size: 1.0rem;
+    float: right;
 }
 table{
     border-radius: 10px;
@@ -16,7 +18,6 @@ td{
     height: 30px;
 }
 #hgs{
-    font-size:0.8rem;
+    font-size:1.0rem;
     text-align: center;
-    margin-left: 50px;
 }

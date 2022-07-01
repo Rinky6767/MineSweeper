@@ -43,7 +43,6 @@ for (let i = 0; i < 10; i++) {
     }
     random[i] = val;
 }
-console.log("location= "+random);
 
 function checker(e) {
     playerGuess= playerGuess+1;
@@ -53,9 +52,7 @@ function checker(e) {
     el.removeEventListener("click",checker);
     let numberPattern = /\d+/g;
     let idvalue = parseInt(id.match(numberPattern).join());
-    console.log("id= " + idvalue);
     if (random.includes(idvalue)) {
-        console.log("bomb..");
         display.style.display="block";
         display.textContent="Loser";
         let start= createButton();
@@ -65,7 +62,6 @@ function checker(e) {
             let idr = random[b];
             let searchId = "cell_ " + idr;
             let cell = document.getElementById(searchId);
-            console.log("randomid: " + idr);
             if (idr == idvalue) {
                 cell.style["background"] = 'url("https://img.icons8.com/emoji/48/000000/bomb-emoji.png")'; 
                 cell.style.backgroundColor = "red";
@@ -82,7 +78,7 @@ function checker(e) {
         score = score + 1;
          hg= Math.max(hg,score);
          highestScore.textContent= "Highest Score: "+hg;
-        updateScore.textContent= "Score: "+score;
+        updateScore.textContent= "Score:"+score;
         localStorage.setItem("Score",hg);
     }
 }
