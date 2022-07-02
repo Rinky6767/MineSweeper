@@ -20,7 +20,10 @@ function reStart(){
         going.play();
     window.location.reload();
 }
-
+if(going.isPaused)
+{
+    going.play();
+}
 function createTable() {
   
     let Continer = document.createElement("table");
