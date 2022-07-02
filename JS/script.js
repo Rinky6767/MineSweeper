@@ -8,8 +8,10 @@ let display= document.getElementById("resultDisplay");
 let reset= document.getElementById("resetButton").addEventListener("click",reStart);
 
 let going = new Audio("Adventure.mp3");
-     going.play();
-
+if(going.isPaused)
+{
+    going.play();
+} 
 if(localStorage.getItem("Score")!==null){
     hg= localStorage.getItem("Score");
     highestScore.textContent= "Highest Score: "+hg;
@@ -17,13 +19,10 @@ if(localStorage.getItem("Score")!==null){
     localStorage.setItem("Score",0);
 }
 function reStart(){
-        going.play();
+        // going.play();
     window.location.reload();
 }
-if(going.isPaused)
-{
-    going.play();
-}
+
 function createTable() {
   
     let Continer = document.createElement("table");
