@@ -24,14 +24,7 @@ td {
     text-align: center;
 }
 
-#gameScore {
-    text-align: center;
-    color: black;
-    border-radius: 5px;
-    width: 10%;
-    font-size: 1.5rem;
-    height: 20%;
-}
+
 
 #start {
     color: white;
@@ -44,6 +37,7 @@ td {
 }
 
 #resetButton {
+    float: right;
     background-color: palevioletred;
     border: none;
     border-radius: 6px;
@@ -54,15 +48,32 @@ td {
     color: white;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 #intro {
     color: lightcoral;
     text-decoration: underline;
     text-transform: uppercase;
     text-align: center;
+}
+#hgs{
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.7rem;
+    height: 20%;
+}
+#gameScore {
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    height: 20%;
+}
+#music{
+    background-color:darksalmon;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 23px;
 }
