@@ -20,9 +20,9 @@ function reStart(){
 }
 
 function createTable() {
-    let going = new Audio("Adventure.mp3");
-    going.loop= true;
-        going.play();
+    // let going = new Audio("Adventure.mp3");
+    // going.loop= true;
+    //     going.play();
     
     let Continer = document.createElement("table");
     document.body.appendChild(Continer);
