@@ -7,6 +7,8 @@ let highestScore= document.getElementById("hgs");
 let display= document.getElementById("resultDisplay");
 let reset= document.getElementById("resetButton").addEventListener("click",reStart);
 
+let going = new Audio("Adventure.mp3");
+    //  going.play();
 
 if(localStorage.getItem("Score")!==null){
     hg= localStorage.getItem("Score");
@@ -15,15 +17,15 @@ if(localStorage.getItem("Score")!==null){
     localStorage.setItem("Score",0);
 }
 function reStart(){
-        // going.play();
+        going.play();
     window.location.reload();
 }
-
+// if(going.isPaused)
+// {
+//     going.play();
+// }
 function createTable() {
-    // let going = new Audio("Adventure.mp3");
-    // going.loop= true;
-    //     going.play();
-    
+  
     let Continer = document.createElement("table");
     document.body.appendChild(Continer);
     let countCell = -1;
@@ -49,6 +51,7 @@ for (let i = 0; i < 10; i++) {
         val = parseInt(Math.random() * 81);
     }
     random[i] = val;
+    console.log(val);
 }
 
 function checker(e) {
