@@ -7,11 +7,7 @@ let highestScore= document.getElementById("hgs");
 let display= document.getElementById("resultDisplay");
 let reset= document.getElementById("resetButton").addEventListener("click",reStart);
 
-let going = new Audio("Adventure.mp3");
-if(going.isPaused)
-{
-    going.play();
-} 
+
 if(localStorage.getItem("Score")!==null){
     hg= localStorage.getItem("Score");
     highestScore.textContent= "Highest Score: "+hg;
@@ -24,7 +20,10 @@ function reStart(){
 }
 
 function createTable() {
-  
+    let going = new Audio("Adventure.mp3");
+    going.loop= true;
+        going.play();
+    
     let Continer = document.createElement("table");
     document.body.appendChild(Continer);
     let countCell = -1;
