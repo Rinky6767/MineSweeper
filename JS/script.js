@@ -7,7 +7,8 @@ let highestScore= document.getElementById("hgs");
 let display= document.getElementById("resultDisplay");
 let reset= document.getElementById("resetButton").addEventListener("click",reStart);
 
-let going = new Audio("Adventure-320bit.mp3");
+let going = new Audio("Adventure.mp3");
+     going.play();
 
 if(localStorage.getItem("Score")!==null){
     hg= localStorage.getItem("Score");
@@ -16,10 +17,12 @@ if(localStorage.getItem("Score")!==null){
     localStorage.setItem("Score",0);
 }
 function reStart(){
+        going.play();
     window.location.reload();
 }
+
 function createTable() {
-   going.play();
+  
     let Continer = document.createElement("table");
     document.body.appendChild(Continer);
     let countCell = -1;
