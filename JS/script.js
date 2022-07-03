@@ -16,7 +16,6 @@ if (localStorage.getItem("Score") !== null) {
     localStorage.setItem("Score", 0);
 }
 function reStart() {
-    going.play();
     window.location.reload();
 }
 function bgMusic(event){
