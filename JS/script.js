@@ -66,9 +66,6 @@ function checker(e) {
     let numberPattern = /\d+/g;
     let idvalue = parseInt(id.match(numberPattern).join());
     if (random.includes(idvalue)) {
-          if(soundbtn.textContent==="Mute"){
-            going.pause();
-         }
         display.style.display = "block";
         display.textContent = "Loser";
         let start = createButton();
@@ -86,6 +83,9 @@ function checker(e) {
                 cell.style.backgroundColor = "red";
             }
         }
+        if(soundbtn.textContent==="Mute"){
+            going.pause();
+         }
     }
     else {
         let updateScore = document.getElementById("gameScore");
