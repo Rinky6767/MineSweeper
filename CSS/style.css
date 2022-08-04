@@ -88,16 +88,18 @@ td {
 }
 
 /* modal */
-.overlay{
+.overlay {
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
-.overlay-hidden{
+
+.overlay-hidden {
     display: none;
 }
+
 .modal {
     position: absolute;
     top: 0;
@@ -113,24 +115,29 @@ td {
     padding: 2rem 3rem;
     border-radius: 15px;
 }
-.close-modal{
+
+.close-modal {
     float: right;
     margin-right: -2rem;
     font-weight: bold;
     cursor: pointer;
 }
-.modal-hidden{
+
+.modal-hidden {
     display: none;
 }
-.replay,.quit{
+
+.replay,
+.quit {
     background-color: red;
     border-radius: 2px;
     color: white;
     border: 1px solid rgb(241, 107, 5);
     cursor: pointer;
 }
+
 @media only screen and (max-width: 320px) {
-  
+
     .modal {
         position: absolute;
         top: 0;
@@ -140,10 +147,12 @@ td {
         width: 90%;
         margin-top: 30%;
     }
-    .head{
+
+    .head {
         font-size: 15px;
     }
-    #intro{
+
+    #intro {
         font-size: 15px;
     }
 }

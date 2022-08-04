@@ -55,9 +55,14 @@ for (let i = 0; i < 10; i++) {
     }
     random[i] = val;
 }
-
 function checker(e) {
     playerGuess = playerGuess + 1;
+    if (playerGuess == 71) {
+        alert("All the Non-Bomb cells are Selected..");
+        let head = document.querySelector(".head");
+        head.textContent = "You Win :)"
+        toggleModal();
+    }
     let id = e.target.id;
     let el = document.getElementById(id);
     el.style.backgroundColor += "green";
@@ -80,9 +85,9 @@ function checker(e) {
                 cell.style.backgroundColor = "red";
             }
         }
-        if(soundbtn.textContent==="Mute"){
+        if (soundbtn.textContent === "Mute") {
             going.pause();
-         }
+        }
     }
     else {
         let updateScore = document.getElementById("gameScore");
@@ -94,13 +99,7 @@ function checker(e) {
     }
 }
 
-if (playerGuess == 71) {
-    alert("All the Non-Bomb cells are Selected..");
-    display.style.display = "block";
-    display.textContent = "Win";
-    let start = createButton();
-    display.appendChild(start);
-}
+
 
 function removeClickAll() {
     let td = document.querySelectorAll("td");
@@ -123,24 +122,24 @@ function resetGame() {
     }
 }
 //modal
-let lay= document.querySelector(".overlay");
-let modal=document.querySelector(".modal");
-let scr=document.querySelector(".score span");
-let best=document.querySelector(".best-score span");
-let close=document.querySelector(".close-modal").addEventListener("click",toggleModal); 
-let replay=document.querySelector(".replay").addEventListener("click", reStart);
-let quit=document.querySelector(".quit").addEventListener("click",()=>window.close());
+let lay = document.querySelector(".overlay");
+let modal = document.querySelector(".modal");
+let scr = document.querySelector(".score span");
+let best = document.querySelector(".best-score span");
+let close = document.querySelector(".close-modal").addEventListener("click", toggleModal);
+let replay = document.querySelector(".replay").addEventListener("click", reStart);
+let quit = document.querySelector(".quit").addEventListener("click", () => window.close());
 
-function handleGameOver(){
+function handleGameOver() {
     toggleModal();
 }
-function toggleModal(){
+function toggleModal() {
     modal.classList.toggle("modal-hidden");
     lay.classList.toggle("overlay-hidden");
-    if(!modal.classList.contains("modal-hidden")){
-       scr.textContent= score;
-       best.textContent=hg;
-       document.body.style.backgroundColor="rgba(0, 0, 0, 0.7)";
+    if (!modal.classList.contains("modal-hidden")) {
+        scr.textContent = score;
+        best.textContent = hg;
+        document.body.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
     }
 }
 
