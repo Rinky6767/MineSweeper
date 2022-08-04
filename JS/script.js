@@ -5,8 +5,9 @@ let hg = 0;
 let playerGuess = 0;
 let highestScore = document.getElementById("hgs");
 let display = document.getElementById("resultDisplay");
-let reset = document.getElementById("resetButton").addEventListener("click", reStart);
-let soundbtn= document.getElementById("music").addEventListener("click",bgMusic);
+let restart = document.getElementById("restartButton").addEventListener("click", reStart);;
+let reset = document.getElementById("resetButton").addEventListener("click", resetGame);
+let soundbtn = document.getElementById("music").addEventListener("click", bgMusic);
 let going = new Audio("Adventure.mp3");
 
 if (localStorage.getItem("Score") !== null) {
@@ -19,16 +20,15 @@ function reStart() {
     going.play();
     window.location.reload();
 }
-function bgMusic(event){
-    if(event.target.textContent=="Play Music"){
-        event.target.textContent="Mute";
+function bgMusic(event) {
+    if (event.target.textContent == "Play Music") {
+        event.target.textContent = "Mute";
         going.play();
     }
-    else{
-        event.target.textContent="Play Music";
+    else {
+        event.target.textContent = "Play Music";
         going.pause();
     }
-    
 }
 function createTable() {
     let Continer = document.createElement("table");
@@ -66,11 +66,12 @@ function checker(e) {
     let numberPattern = /\d+/g;
     let idvalue = parseInt(id.match(numberPattern).join());
     if (random.includes(idvalue)) {
-          going.pause();
-        display.style.display = "block";
-        display.textContent = "Loser";
-        let start = createButton();
-        display.appendChild(start);
+        going.pause();
+        handleGameOver();
+        // display.style.display = "block";
+        // display.textContent = "Loser";
+        // let start = createButton();
+        // display.appendChild(start);
         removeClickAll();
         for (let b = 0; b < 10; b++) {
             let idr = random[b];
@@ -116,3 +117,32 @@ function createButton() {
     btn.addEventListener("click", reStart);
     return btn;
 }
+
+function resetGame() {
+    if (localStorage.getItem("Score") !== null) {
+        localStorage.removeItem("Score");
+        reStart();
+    }
+}
+//modal
+let lay= document.querySelector(".overlay");
+let modal=document.querySelector(".modal");
+let scr=document.querySelector(".score span");
+let best=document.querySelector(".best-score span");
+let close=document.querySelector(".close-modal").addEventListener("click",toggleModal); 
+let replay=document.querySelector(".replay").addEventListener("click", reStart);
+let quit=document.querySelector(".quit").addEventListener("click",()=>window.close());
+
+function handleGameOver(){
+    toggleModal();
+}
+function toggleModal(){
+    modal.classList.toggle("modal-hidden");
+    lay.classList.toggle("overlay-hidden");
+    if(!modal.classList.contains("modal-hidden")){
+       scr.textContent= score;
+       best.textContent=hg;
+       document.body.style.backgroundColor="rgba(0, 0, 0, 0.7)";
+    }
+}
+

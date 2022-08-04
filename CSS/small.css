@@ -1,6 +1,6 @@
 #gameScore {
     font-size: 1.0rem;
-    margin:5px;
+    margin: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -27,4 +27,7 @@ td {
     border-radius: 5px;
     font-size: 1.7rem;
     height: 20%;
+}
+#intro{
+    font-size: 20px;
 }

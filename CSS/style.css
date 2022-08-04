@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    overflow: hidden;
 }
 
 table {
@@ -24,8 +25,6 @@ td {
     text-align: center;
 }
 
-
-
 #start {
     color: white;
     margin-left: 12px;
@@ -40,12 +39,19 @@ td {
     float: right;
     background-color: palevioletred;
     border: none;
-    border-radius: 6px;
-    font-size: 1.0rem;
+    border-radius: 5px;
+    height: 23px;
     cursor: pointer;
-    width: 9%;
-    height: 25px;
     color: white;
+}
+
+#restartButton {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 23px;
+    color: white;
+    background-color: rgba(68, 201, 225, 0.95);
 }
 
 #intro {
@@ -54,7 +60,8 @@ td {
     text-transform: uppercase;
     text-align: center;
 }
-#hgs{
+
+#hgs {
     text-align: center;
     color: black;
     border-radius: 5px;
@@ -62,6 +69,7 @@ td {
     font-size: 1.7rem;
     height: 20%;
 }
+
 #gameScore {
     text-align: center;
     color: black;
@@ -69,11 +77,73 @@ td {
     font-size: 1.7rem;
     height: 20%;
 }
-#music{
-    background-color:darksalmon;
+
+#music {
+    background-color: darksalmon;
     color: white;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     height: 23px;
+}
+
+/* modal */
+.overlay{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay-hidden{
+    display: none;
+}
+.modal {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20%;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+}
+.close-modal{
+    float: right;
+    margin-right: -2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-hidden{
+    display: none;
+}
+.replay,.quit{
+    background-color: red;
+    border-radius: 2px;
+    color: white;
+    border: 1px solid rgb(241, 107, 5);
+    cursor: pointer;
+}
+@media only screen and (max-width: 320px) {
+  
+    .modal {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-top: 30%;
+    }
+    .head{
+        font-size: 15px;
+    }
+    #intro{
+        font-size: 15px;
+    }
 }
