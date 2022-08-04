@@ -17,7 +17,6 @@ if (localStorage.getItem("Score") !== null) {
     localStorage.setItem("Score", 0);
 }
 function reStart() {
-    going.play();
     window.location.reload();
 }
 function bgMusic(event) {
@@ -68,10 +67,6 @@ function checker(e) {
     if (random.includes(idvalue)) {
         going.pause();
         handleGameOver();
-        // display.style.display = "block";
-        // display.textContent = "Loser";
-        // let start = createButton();
-        // display.appendChild(start);
         removeClickAll();
         for (let b = 0; b < 10; b++) {
             let idr = random[b];
@@ -85,6 +80,9 @@ function checker(e) {
                 cell.style.backgroundColor = "red";
             }
         }
+        if(soundbtn.textContent==="Mute"){
+            going.pause();
+         }
     }
     else {
         let updateScore = document.getElementById("gameScore");
